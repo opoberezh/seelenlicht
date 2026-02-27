@@ -34,7 +34,7 @@ export default function PortfolioLuxury() {
   alt={item.alt || "Seelenlicht Portfolio"}
   fill
   priority
-  className="object-cover opacity-20 group-hover:scale-105 transition duration-500"
+  className="object-cover opacity-30 group-hover:scale-105 transition duration-500"
 />
 
             {/* Overlay */}

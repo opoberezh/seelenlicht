@@ -21,7 +21,7 @@ export default function PremiumHero() {
       alt="Seelenlicht background"
       fill
       priority
-      className="object-cover opacity-20"
+      className="object-cover opacity-30"
     />
   </div>
    
