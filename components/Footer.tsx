@@ -31,12 +31,11 @@ export default function Footer() {
                     href={item.href}
                     className="group relative inline-block"
                   >
-                    <span className="transition-colors duration-300 group-hover:text-white/70">
+                    <span className="hover:text-yellow-200 transition">
                       {item.name}
                     </span>
 
-                    {/* animated underline */}
-                    <span className="absolute left-0 -bottom-1 w-0 h-px bg-white transition-all duration-500 group-hover:w-full" />
+                    
                   </Link>
                 </li>
               ))}
@@ -51,13 +50,13 @@ export default function Footer() {
 
             <div className="space-y-4 text-lg">
               <a
-                href="mailto:hello@die-atmosphaere.de"
+                href="mailto:hello@seelenlicht.de"
                 className="group relative inline-block"
               >
-                <span className="transition-colors duration-300 group-hover:text-white/70">
+                <span className="hover:text-yellow-200 transition">
                   hello@seelenlicht.de
                 </span>
-                <span className="absolute left-0 -bottom-1 w-0 h-px bg-white transition-all duration-500 group-hover:w-full" />
+               
               </a>
 
               <p className="text-white/60 text-base">Germany</p>
