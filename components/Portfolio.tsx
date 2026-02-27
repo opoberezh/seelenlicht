@@ -4,6 +4,9 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { portfolioItems } from "@/app/lib/portfolioData";
 import Image from "next/image";
+import { Playfair_Display } from "next/font/google";
+
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["400"] });
 
 export default function PortfolioLuxury() {
   const [video, setVideo] = useState<string | null>(null);
@@ -11,7 +14,7 @@ export default function PortfolioLuxury() {
   return (
     <section id="portfolio" className="py-32 px-6 max-w-7xl mx-auto">
 
-      <h2 className="text-4xl text-center mb-20 tracking-wide text-white font-light">
+      <h2  className={`${playfair.className} text-4xl md:text-5xl mb-20 text-center text-white`}>
         Visual Poetry Portfolio
       </h2>
 
@@ -22,7 +25,7 @@ export default function PortfolioLuxury() {
           <motion.div
             key={item.id}
             whileHover={{ scale: 1.03 }}
-            className="relative aspect-4/5 cursor-pointer overflow-hidden rounded-xl border border-neutral-800 group bg-black"
+            className="relative aspect-4/5 cursor-pointer overflow-hidden rounded-xl border border-neutral-800 group bg-black  hover:border-yellow-200 transition duration-300"
             onClick={() => setVideo(item.video)}
           >
 
@@ -31,12 +34,12 @@ export default function PortfolioLuxury() {
   alt={item.alt || "Seelenlicht Portfolio"}
   fill
   priority
-  className="object-cover opacity-80 group-hover:scale-105 transition duration-500"
+  className="object-cover opacity-20 group-hover:scale-105 transition duration-500"
 />
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-liner-to-t from-black/80 via-transparent to-transparent flex items-end p-6">
-              <span className="text-white text-sm tracking-wide">
+              <span className="text-xl font-light tracking-widest uppercase text-yellow-100">
                 {item.title}
               </span>
             </div>

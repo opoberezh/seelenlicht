@@ -1,25 +1,32 @@
 "use client";
+import { motion } from "framer-motion";
+import { Playfair_Display } from "next/font/google";
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  weight: ["400"], // Next.js font API expects array
+});
 
 export default function FooterContact() {
   return (
-    <section className="bg-black text-white py-28 px-6 text-center border-t border-white/10">
+    <section id="contact" className="py-40 text-center px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="max-w-3xl mx-auto space-y-10"
+        >
+          <h2 className={`${playfair.className} text-4xl md:text-6xl leading-tight`}
+          >
+            Erzählen wir Ihre Atmosphäre in Licht
+          </h2>
 
-      <h2 className="text-4xl font-light mb-8">
-        Erzählen wir deine Atmosphäre
-      </h2>
-
-      <p className="opacity-70 max-w-xl mx-auto mb-12">
-        Boutique Studio für stilvolle, inszenierte Einladungsvideos.
-        Geschichten, die bleiben.
-      </p>
-
-      <a
-        href="mailto:contact@dieatmosphaere.de"
-        className="inline-block border border-white px-10 py-4 rounded-full hover:scale-105 transition"
-      >
-        Jetzt anfragen
-      </a>
-
-    </section>
+          <a
+            href="mailto:opoberezh.2015@gmail.com"
+            className="inline-block border border-yellow-200 text-yellow-200 rounded-xl px-8 py-3 tracking-[0.25em] uppercase hover:bg-yellow-200 hover:text-black transition duration-300"
+          >
+            Kontakt aufnehmen
+          </a>
+        </motion.div>
+      </section>
   );
 }
