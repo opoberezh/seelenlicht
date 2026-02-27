@@ -5,7 +5,8 @@ import PremiumHero from "@/components/PremiumHero";
 import  ServicesMenu  from "@/components/ServicesMenu";
 
 import PortfolioLuxury  from "@/components/Portfolio";
-import FooterContact from "@/components/FooterContact";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 
 
@@ -25,7 +26,10 @@ export default function SeelenlichtHomepage() {
       <PortfolioLuxury/>
 
       {/* Contact CTA */}
-     <FooterContact/>
+     <Contact/>
+
+     {/* Footer */}
+     <Footer/>
     </main>
   );
 }

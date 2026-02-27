@@ -6,7 +6,7 @@ const playfair = Playfair_Display({
   weight: ["400"], // Next.js font API expects array
 });
 
-export default function FooterContact() {
+export default function Contact() {
   return (
     <section id="contact" className="py-40 text-center px-6">
         <motion.div
